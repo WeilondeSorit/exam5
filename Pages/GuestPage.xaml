@@ -28,7 +28,7 @@
             <ComboBox x:Name="Filter" 
                       Width="150" Height="30" Margin="10,0,0,0"
                       SelectionChanged="Filter_SelectionChanged"/>
-            <Button x:Name="exit" Width="150" Height="30" Margin="10, 0,0,0" Content="Выход!" Click="exit_Click"/>
+            <Button x:Name="exit" Click="exit_Click" Width="150" Height="30" Margin="10, 0,0,0" Content="Выход!"/>
         </StackPanel>
 
         <!-- Предупреждение -->

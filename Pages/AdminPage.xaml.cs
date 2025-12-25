@@ -46,7 +46,7 @@ namespace Exam5.Pages
             {
                 filtered = filtered.Where(p => p.Category.ToLower() == selectedCat);
             }
-            Adminview.ItemsSource = filtered;
+            Adminview.ItemsSource = filtered.ToList();
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
@@ -68,6 +68,7 @@ namespace Exam5.Pages
                 };
                 db.Products.Add(newProd);
                 db.SaveChanges();
+                Searching();
             }
             catch (Exception)
             {
@@ -77,7 +78,9 @@ namespace Exam5.Pages
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
+            var a = Adminview.SelectedItem;
 
+            
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
