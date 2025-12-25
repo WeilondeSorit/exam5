@@ -78,16 +78,16 @@ namespace Exam5.Pages
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
-            var a = Adminview.SelectedItem;
-
+            var a = Adminview.SelectedItem as Products;
+            a.Manufacturer = vara.Text;
+            db.SaveChanges();
             
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
-        {
-
+        { 
+            var b = Adminview.SelectedItem as Products;
+            db.Products.Remove(b);
         }
-
-      
     }
 }
